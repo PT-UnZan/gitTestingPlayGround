@@ -18,7 +18,7 @@ on:
         type: boolean
       environment:
         description: 'Environment to run tests against'
-        type: environment
+        type: string # can not use environment since free account
         required: true
         options:
         - windows
