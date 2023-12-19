@@ -33,7 +33,7 @@ jobs:
           echo "Log level: $LEVEL"
           echo "Tags: $TAGS"
           echo "Environment: $ENVIRONMENT"
-          echo "Public key: $ENVIRONMENT['PUBLIC_KEY']"
+          echo "Public key: vars.PUBLIC_KEY"
           echo "Device: $DEVICE"
         env:
           LEVEL: ${{ inputs.logLevel }}
