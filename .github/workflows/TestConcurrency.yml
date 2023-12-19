@@ -25,10 +25,18 @@ jobs:
       cancel-in-progress: ${{ inputs.isCancelInProgress }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - run: date
+      
       - run: |
-          timedatectl
           echo "CONCURRENCY_ID: $CONCURRENCY_ID"
           echo "IS_CANCEL_IN_PROGRESS: $IS_CANCEL_IN_PROGRESS"
         env:
           CONCURRENCY_ID: ${{ inputs.concurrencyId }}
           IS_CANCEL_IN_PROGRESS: ${{ inputs.isCancelInProgress }}
+
+      - uses: jakejarvis/wait-action@v0.1.1
+        with:
+            # Follows the Linux sleep syntax for time units: a number followed by s for seconds, m for minutes, etc
+          time: "3m"
+      - run: date
+      - run: echo "Finished!"
