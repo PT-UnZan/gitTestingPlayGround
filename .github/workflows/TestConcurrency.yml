@@ -37,6 +37,6 @@ jobs:
       - uses: jakejarvis/wait-action@v0.1.1
         with:
             # Follows the Linux sleep syntax for time units: a number followed by s for seconds, m for minutes, etc
-          time: "3m"
+          time: "30s"
       - run: date
       - run: echo "Finished!"
