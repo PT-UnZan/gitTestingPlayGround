@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Test Concurrency
-run-name: Test concurrency with id = ${{ inputs.concurrencyId }} ${{ inputs.isCancelInProgress && 'and could be interruptted' || '' }}
+run-name: Test concurrency with id = ${{ inputs.concurrencyId }} ${{ inputs.isCancelInProgress && 'and cancel the in progress job' || '' }}
 # Controls when the workflow will run
 on:
   workflow_dispatch:
